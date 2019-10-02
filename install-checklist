@@ -13,3 +13,22 @@ $ ~/.dropbox-dost/dropboxd
 $ sudo add-apt-repository ppa:jtaylor/keepass
 $ sudo apt-get update && sudo apt-get install keepass2
 
+- jetbrains toolbox
+# https://www.jetbrains.com/toolbox-app/
+
+- zprezto
+# https://github.com/sorin-ionescu/prezto
+
+- atom
+(software center)
+
+- google earth
+(software center)
+
+- gimp
+
+- inkscape
+
+- draftsight
+
+- onshape
