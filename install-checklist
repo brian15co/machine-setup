@@ -1,0 +1,15 @@
+# new install checklist
+
+## install
+- chrome
+$ wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+$ sudo dpkg -i google-chrome-stable_current_amd64.deb
+
+- dropbox
+$ cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
+$ ~/.dropbox-dost/dropboxd
+
+- keepass
+$ sudo add-apt-repository ppa:jtaylor/keepass
+$ sudo apt-get update && sudo apt-get install keepass2
+
