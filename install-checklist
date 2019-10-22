@@ -23,6 +23,9 @@ $ sudo apt-get install fonts-powerline
 - atom
 (software center)
 
+- visual studio code
+# https://linuxize.com/post/how-to-install-visual-studio-code-on-ubuntu-18-04/
+
 - google earth
 (software center)
 
@@ -33,3 +36,8 @@ $ sudo apt-get install fonts-powerline
 - draftsight
 
 - onshape
+
+- pyenv
+
+- nvm
+# https://github.com/nvm-sh/nvm#installation-and-update
