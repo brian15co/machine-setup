@@ -41,3 +41,9 @@ $ sudo apt-get install fonts-powerline
 
 - nvm
 # https://github.com/nvm-sh/nvm#installation-and-update
+
+- Google Cloud SDK
+# https://cloud.google.com/sdk/docs/
+
+- Docker / docker-compose
+# https://docs.docker.com/compose/install/
