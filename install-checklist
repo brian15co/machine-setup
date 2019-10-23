@@ -39,12 +39,15 @@ $ sudo apt-get install fonts-powerline
 
 - pyenv
 
+- poetry
+# https://poetry.eustace.io/docs/
+
 - nvm
 # https://github.com/nvm-sh/nvm#installation-and-update
 
 - Google Cloud SDK
 # https://cloud.google.com/sdk/docs/
-authorize the proxt to run with $ gcloud auth application-default login
+authorize the proxy to run with $ gcloud auth application-default login
 
 - Docker / docker-compose
 # https://docs.docker.com/compose/install/
