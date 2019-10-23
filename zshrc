@@ -18,6 +18,8 @@ alias database="cd ~/repos/toolkit/database"
 alias webapp="cd ~/repos/toolkit/webapp"
 alias dashboard="cd ~/repos/amp-dashboard"
 alias console="cd ~/repos/control-panel"
+alias mysql-local="mysql -P 3306 -h 127.0.0.1 -u developer -p<localdev-pw>"
+alias mysql-staging="mysql -P 3307 -h 127.0.0.1 -u developer -p<staging-pw>"
 
 # add pyenv stuff to PATH
 export PATH="/home/brian/.pyenv/bin:$PATH"
