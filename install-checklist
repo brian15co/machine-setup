@@ -44,6 +44,7 @@ $ sudo apt-get install fonts-powerline
 
 - Google Cloud SDK
 # https://cloud.google.com/sdk/docs/
+authorize the proxt to run with $ gcloud auth application-default login
 
 - Docker / docker-compose
 # https://docs.docker.com/compose/install/
