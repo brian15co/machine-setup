@@ -13,6 +13,12 @@ fi
 
 # Customize to your needs...
 
+# aliases
+alias database="cd ~/repos/toolkit/database"
+alias webapp="cd ~/repos/toolkit/webapp"
+alias dashboard="cd ~/repos/amp-dashboard"
+alias console="cd ~/repos/control-panel"
+
 # add pyenv stuff to PATH
 export PATH="/home/brian/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
