@@ -23,6 +23,12 @@ $ sudo apt-get install fonts-powerline
 - terminator
 S sudo apt install terminator
 
+- curl
+$ sudo apt install curl
+
+- Google Cloud SDK
+# https://cloud.google.com/sdk/docs/downloads-apt-get
+
 - atom
 (software center)
 
