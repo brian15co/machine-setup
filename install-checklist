@@ -20,6 +20,9 @@ $ sudo apt-get update && sudo apt-get install keepass2
 # https://github.com/sorin-ionescu/prezto
 $ sudo apt-get install fonts-powerline
 
+- terminator
+S sudo apt install terminator
+
 - atom
 (software center)
 
