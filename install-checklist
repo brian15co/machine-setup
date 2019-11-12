@@ -49,8 +49,6 @@ $ sudo apt install curl
 
 - onshape
 
-- pyenv
-
 - poetry
 # https://poetry.eustace.io/docs/
 
