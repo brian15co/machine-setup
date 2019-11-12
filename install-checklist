@@ -61,3 +61,4 @@ authorize the proxy to run with $ gcloud auth application-default login
 
 - Docker / docker-compose
 # https://docs.docker.com/compose/install/
+# authenticate bug: https://stackoverflow.com/a/35594119/2224777
