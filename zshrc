@@ -3,7 +3,6 @@
 #
 # Authors:
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
-#   Brian Leach <brian.leach@blueharness.com>
 #
 
 # Source Prezto.
@@ -12,25 +11,31 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
 
-# aliases
-alias database="cd ~/repos/toolkit/database"
-alias webapp="cd ~/repos/toolkit/webapp"
-alias dashboard="cd ~/repos/amp-dashboard"
-alias console="cd ~/repos/control-panel"
-alias mysql-local="mysql -P 3306 -h 127.0.0.1 -u developer -p<localdev-pw>"
-alias mysql-staging="mysql -P 3307 -h 127.0.0.1 -u developer -p<staging-pw>"
-
-# add pyenv stuff to PATH
-export PATH="/home/brian/.pyenv/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-
-# add nvm stuff to PATH
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-if [ -f ~/catkin_ws/src/axon/core/configuration/axon-utils.sh ]; then
-    . ~/catkin_ws/src/axon/core/configuration/axon-utils.sh
+# dynamic library linker
+export LD_LIBRARY_PATH="/usr/lib/x86_64-linux-gnu/"
+
+# pipenv
+export PATH="/home/brian/.local/bin:$PATH"
+
+# poetry
+export PATH="/home/brian/.poetry/bin:$PATH"
+
+# Tilix config helper
+if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
+        source /etc/profile.d/vte.sh
 fi
+
+alias axon=~/.cache/pypoetry/virtualenvs/axon-tooling-LoSIot5z-py3.6/bin/axon
+
+/usr/bin/setxkbmap -option 'caps:ctrl_modifier'
+/usr/bin/xcape -e 'Caps_Lock=Escape' -t 100
