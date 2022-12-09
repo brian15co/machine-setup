@@ -16,9 +16,14 @@ $ sudo apt-get update && sudo apt-get install keepass2
 - jetbrains toolbox
 # https://www.jetbrains.com/toolbox-app/
 
+- utilities
+$ sudo apt install git
+$ sudo apt install vim
+
 - zprezto
 # https://github.com/sorin-ionescu/prezto
-$ sudo apt-get install fonts-powerline
+(using powerline theme)
+$ sudo apt install fonts-powerline
 
 - terminator
 S sudo apt install terminator
