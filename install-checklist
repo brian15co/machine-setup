@@ -20,6 +20,7 @@ $ sudo apt-get update && sudo apt-get install keepass2
 $ sudo apt install git
 $ sudo apt install vim
 $ sudo apt install build-essential
+# https://stackoverflow.com/a/67853440 (for various python install failures)
 
 - zprezto
 # https://github.com/sorin-ionescu/prezto
