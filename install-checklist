@@ -19,6 +19,7 @@ $ sudo apt-get update && sudo apt-get install keepass2
 - utilities
 $ sudo apt install git
 $ sudo apt install vim
+$ sudo apt install build-essential
 
 - zprezto
 # https://github.com/sorin-ionescu/prezto
