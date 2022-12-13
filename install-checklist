@@ -22,7 +22,7 @@ $ sudo apt install vim
 
 - zprezto
 # https://github.com/sorin-ionescu/prezto
-(using powerline theme)
+(using paradox theme)
 $ sudo apt install fonts-powerline
 
 - terminator
