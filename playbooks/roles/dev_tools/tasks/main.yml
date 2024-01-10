@@ -1,0 +1,10 @@
+---
+# tasks file for dev_tools
+- name: Install development tools
+  apt:
+    name: "{{ item }}"
+    state: present
+  loop:
+    - git
+    - vim
+    - build-essential

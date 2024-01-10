@@ -1,0 +1,7 @@
+---
+- hosts: local
+  become: yes
+  roles:
+    - role: dev_tools
+    - role: work_tools
+      when: install_work_tools
