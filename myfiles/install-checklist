@@ -1,0 +1,71 @@
+# new install checklist
+
+## install
+- chrome
+$ wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+$ sudo dpkg -i google-chrome-stable_current_amd64.deb
+
+- dropbox
+$ cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
+$ ~/.dropbox-dost/dropboxd
+
+- keepass
+$ sudo add-apt-repository ppa:jtaylor/keepass
+$ sudo apt-get update && sudo apt-get install keepass2
+
+- jetbrains toolbox
+# https://www.jetbrains.com/toolbox-app/
+
+- utilities
+$ sudo apt install git
+$ sudo apt install vim
+$ sudo apt install build-essential
+# https://stackoverflow.com/a/67853440 (for various python install failures)
+
+- zprezto
+# https://github.com/sorin-ionescu/prezto
+(using paradox theme)
+$ sudo apt install fonts-powerline
+
+- terminator
+S sudo apt install terminator
+
+- curl
+$ sudo apt install curl
+
+- Google Cloud SDK
+# https://cloud.google.com/sdk/docs/downloads-apt-get
+
+- pyenv
+# https://github.com/pyenv/pyenv#basic-github-checkout
+
+- atom
+(software center)
+
+- visual studio code
+# https://linuxize.com/post/how-to-install-visual-studio-code-on-ubuntu-18-04/
+
+- google earth
+(software center)
+
+- gimp
+
+- inkscape
+
+- draftsight
+
+- onshape
+
+- poetry
+# https://poetry.eustace.io/docs/
+
+- nvm
+# https://github.com/nvm-sh/nvm#installation-and-update
+
+- Google Cloud SDK
+# https://cloud.google.com/sdk/docs/
+authorize the proxy to run with $ gcloud auth application-default login
+
+- Docker / docker-compose
+# https://docs.docker.com/compose/install/
+# authenticate bug: https://stackoverflow.com/a/35594119/2224777
