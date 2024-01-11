@@ -8,3 +8,20 @@
     - git
     - vim
     - build-essential
+
+- name: Install zsh
+  package: 
+    name: zsh
+    state: present
+
+- name: Install Oh My Zsh
+  shell: sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  args:
+    creates: "{{ ansible_env.HOME }}/.oh-my-zsh"
+  become_user: "{{ ansible_env.USER }}"
+
+- name: Change shell to Zsh
+  user:
+    name: "{{ ansible_env.USER }}"
+    shell: /bin/zsh
+
