@@ -5,27 +5,69 @@
     name: "{{ item }}"
     state: present
   loop:
+    - zsh
     - git
     - vim
+    - fonts-powerline
+    - fzf  
     - build-essential
     - htop
     - vlc
     - tilix 
     - sysstat  
+    - glances 
 
-- name: Install zsh
-  package: 
-    name: zsh
-    state: present
+- name: configure git
+  git_config:
+    name: user.email
+    scope: global
+    value: 'brian.leach.6@gmail.com'
+  vars:
+    ansible_user: '{{ user_name }}'
+    ansible_become: false    
+
+- name: configure git continued
+  git_config:
+    name: user.name
+    scope: global
+    value: 'Brian Leach'
+  vars: 
+    ansible_user: '{{ user_name }}'
+    ansible_become: false    
 
 - name: Install Oh My Zsh
   shell: sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
   args:
-    creates: "{{ ansible_env.HOME }}/.oh-my-zsh"
-  become_user: "{{ ansible_env.USER }}"
+    creates: "{{ home_dir }}/.oh-my-zsh"
+  become_user: "{{ user_name }}"
 
 - name: Change shell to Zsh
   user:
-    name: "{{ ansible_env.USER }}"
+    name: "{{ user_name }}"
     shell: /bin/zsh
+
+- name: Install profiles and shell scripts
+  ansible.builtin.copy:
+    src: 'files/{{ item.name }}'
+    dest: '{{ home_dir}}/.{{ item.name }}'
+  loop:
+    - name: 'vimrc'
+    - name: 'zpreztorc'
+    - name: 'zshrc'
+  vars:
+    ansible_user: '{{ user_name }}'  
+    ansible_become: false  
+
+- name: DEBUG
+  ansible.builtin.debug:
+    msg: 'here is user: {{ ansible_env.USER }}, home: {{ ansible_env}}'
+  vars:
+    ansible_become: false 
+    ansible_user: '{{ user_name }}'
+
+- name: more debug
+  command: 'ls -lah {{ home_dir }}'
+  vars:
+    ansible_become: false  
+ 
 

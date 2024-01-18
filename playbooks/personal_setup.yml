@@ -1,7 +1,11 @@
 ---
 - hosts: local
   become: yes
+  become_method: sudo  
   roles:
     - role: dev_tools
     - role: work_tools
       when: install_work_tools
+  vars:
+    user_name: brian
+    home_dir: /home/brian    
