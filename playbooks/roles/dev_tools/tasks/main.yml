@@ -8,6 +8,10 @@
     - git
     - vim
     - build-essential
+    - htop
+    - vlc
+    - tilix 
+    - sysstat  
 
 - name: Install zsh
   package: 
