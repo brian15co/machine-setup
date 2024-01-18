@@ -8,6 +8,9 @@
     - openssh-client
     - openssh-server
     - apt-transport-https  
+    - net-tools  
+    - nmap  
+    - wireshark  
     - wget
     - gpg  
     - zsh
