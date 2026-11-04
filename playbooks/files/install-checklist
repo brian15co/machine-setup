@@ -18,7 +18,7 @@ $ sudo apt-get update && sudo apt-get install keepass2
 
 - utilities
 $ sudo apt install git
-$ sudo apt install vim
+$ sudo apt install vim-gtk3
 $ sudo apt install build-essential
 # https://stackoverflow.com/a/67853440 (for various python install failures)
 
