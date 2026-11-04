@@ -2,7 +2,7 @@
 name = "machine-setup"
 version = "0.1.1"
 description = ""
-authors = [{name = "Brian Leach", email = "<brian@amprobotics.com>"}]
+authors = [{name = "Brian Leach", email = "<brian.leach.6@gmail.com>"}]
 readme = "README.md"
 requires-python = ">=3.10"
 
