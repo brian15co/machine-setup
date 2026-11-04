@@ -15,7 +15,7 @@
     - gpg  
     - zsh
     - git
-    - vim
+    - vim-gtk3
     - xcape  
     - fonts-powerline
     - fzf  
