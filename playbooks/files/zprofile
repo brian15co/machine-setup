@@ -69,7 +69,8 @@ fi
 export PATH="$HOME/.poetry/bin:$PATH"
 
 # remap escape and caps lock behavior
-setxkbmap -option 'caps:ctrl_modifier' && xcape -e 'Caps_Lock=Escape' &
+## old way using x11, doesn't work well with wayland
+# setxkbmap -option 'caps:ctrl_modifier' && xcape -e 'Caps_Lock=Escape' &
 
 
 # Added by Toolbox App
