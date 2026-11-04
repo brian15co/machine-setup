@@ -35,7 +35,4 @@ if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
         source /etc/profile.d/vte.sh
 fi
 
-alias axon=~/.cache/pypoetry/virtualenvs/axon-tooling-LoSIot5z-py3.6/bin/axon
-
-/usr/bin/setxkbmap -option 'caps:ctrl_modifier'
-/usr/bin/xcape -e 'Caps_Lock=Escape' -t 100
+alias gau="git add -u && git status"
