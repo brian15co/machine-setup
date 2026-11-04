@@ -8,6 +8,7 @@ So steps before the ansible installer can run
 2. `sudo apt install pipx` (to install poetry)
 3. `pipx install poetry` (with `pipx ensurepath`)
 4. `sudo apt install git`
-5. From `<your repos dir>`, run `git clone <this repo>`.
+5. `sudo apt install ansible-core`
+6. From `<your repos dir>`, run `git clone <this repo>`.
 
 `ansible-playbook playbooks/personal_setup.yml -i hosts.ini --ask-become-pass`
