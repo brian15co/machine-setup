@@ -28,32 +28,14 @@ export PAGER='less'
 if [[ -z "$LANG" ]]; then
   export LANG='en_US.UTF-8'
 fi
-
-#
 # Paths
-#
-
-# Ensure path arrays do not contain duplicates.
+# -U removes duplicate entries; (N) drops any directory that doesn't exist.
 typeset -gU cdpath fpath mailpath path
-
-# Set the list of directories that cd searches.
-# cdpath=(
-#   $cdpath
-# )
-
-# Set the list of directories that Zsh searches for programs.
 path=(
-  /usr/local/{bin,sbin}
+  $HOME/.poetry/bin(N)
+  /usr/local/{bin,sbin}(N)
   $path
 )
-
-#
-# Less
-#
-
-# Aliases
-alias gau="git add -u && git status"
-alias cortex="axon run --no-control-panel -v cortex"
 
 # Set the default Less options.
 # Mouse-wheel scrolling has been disabled by -X (disable screen clearing).
@@ -69,9 +51,13 @@ fi
 export PATH="$HOME/.poetry/bin:$PATH"
 
 # remap escape and caps lock behavior
-## old way using x11, doesn't work well with wayland
-# setxkbmap -option 'caps:ctrl_modifier' && xcape -e 'Caps_Lock=Escape' &
-
+## old way with setxkbmap using x11, doesn't work well with wayland. Set /etc/keyd/default.conf configuration with
+# [ids]
+# *
+#
+# [main]
+# capslock = overload(control, esc)
+# EOF
 
 # Added by Toolbox App
 export PATH="$PATH:/home/brian/.local/share/JetBrains/Toolbox/scripts"
