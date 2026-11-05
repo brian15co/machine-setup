@@ -12,6 +12,7 @@
     - nmap  
     - wireshark  
     - wget
+    - curl
     - gpg  
     - zsh
     - git
@@ -57,11 +58,6 @@
     src: /etc/profile.d/vte-2.91.sh
     dest: /etc/profile.d/vte.sh
     state: link
-
-- name: configure vundle package manager for git
-  ansible.builtin.git:
-    repo: https://github.com/VundleVim/Vundle.vim.git
-    dest: '{{ home_dir }}/.vim/bundle/Vundle.vim' 
 
 - name: configure git
   git_config:
