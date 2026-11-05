@@ -22,6 +22,7 @@
     - fzf  
     - build-essential
     - htop
+    - nethogs
     - vlc
     - tilix
     - sysstat
